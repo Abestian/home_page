@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  background-color: rgba(10, 90, 170, 0.8784313725);
+  font-family: "Montserrat", sans-serif;
+  font-size: 34px;
+}
+
+.quick-access {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  text-align: center;
+  border-radius: 15px;
+  transition: width 0.2s, height 0.2s;
+}
+.quick-access .items {
+  position: absolute;
+  display: inline-block;
+  margin: 6px auto;
+  width: 45px;
+  height: 45px;
+  transition: width 0.2s, height 0.2s;
+}
+.quick-access .items a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  line-height: 45px;
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 7px;
+  transition: color 0.3s, font-size 0.2s, border 0.1s, background-color 0.1s;
+  cursor: pointer;
+}
+.quick-access .items a .bckgrnd {
+  z-index: -2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 33px;
+  height: 20px;
+  background-color: antiquewhite;
+  border-radius: 4px;
+  transition: display 0.1s;
+}
+.quick-access .items a .b-cir {
+  width: 28px;
+  height: 29px;
+  border-radius: 50%;
+}
+.quick-access .items a .b-sq {
+  width: 27px;
+  height: 25px;
+}
+.quick-access .items a:hover {
+  font-size: 35px;
+  border: 2px solid antiquewhite;
+  background-color: rgba(255, 255, 255, 0.3215686275);
+}
+.quick-access .items .mail:hover {
+  color: #fabc05;
+}
+.quick-access .items .mail:hover .b-rec {
+  display: block;
+}
+.quick-access .items .youtube:hover {
+  color: #ff0000;
+}
+.quick-access .items .youtube:hover .b-rec {
+  display: block;
+}
+.quick-access .items .github:hover {
+  color: #913fa1;
+}
+.quick-access .items .github:hover .b-cir {
+  display: block;
+}
+.quick-access .items .linkedin:hover {
+  color: #0a66c2;
+}
+.quick-access .items .linkedin:hover .b-sq {
+  display: block;
+}
+.quick-access .items .reddit:hover {
+  color: #ff4500;
+}
+.quick-access .items .reddit:hover .b-sq {
+  display: block;
+}
+.quick-access .i1 {
+  left: 5%;
+}
+.quick-access .i2 {
+  left: 32%;
+  transform: translate(-50%);
+}
+.quick-access .i3 {
+  left: 50%;
+  transform: translate(-50%);
+}
+.quick-access .i4 {
+  right: 32%;
+  transform: translate(50%);
+}
+.quick-access .i5 {
+  right: 5%;
+}
+
+@media (min-width: 390px) {
+  .quick-access {
+    width: 95%;
+    height: 80px;
+    font-size: 40px;
+  }
+  .quick-access .items {
+    margin: 9px auto;
+    width: 60px;
+    height: 60px;
+  }
+  .quick-access .items a {
+    line-height: 60px;
+    border-radius: 9px;
+  }
+  .quick-access .items a .bckgrnd {
+    width: 43px;
+    height: 28px;
+  }
+  .quick-access .items a .b-cir {
+    width: 35px;
+    height: 41px;
+  }
+  .quick-access .items a .b-sq {
+    width: 35px;
+    height: 31px;
+  }
+  .quick-access .items a:hover {
+    font-size: 45px;
+  }
+}
+@media (min-width: 480px) {
+  .quick-access {
+    width: 456px;
+    height: 115px;
+    font-size: 50px;
+  }
+  .quick-access .items {
+    margin: 18px auto;
+    width: 75px;
+    height: 75px;
+  }
+  .quick-access .items a {
+    line-height: 75px;
+    border-radius: 11px;
+  }
+  .quick-access .items a .bckgrnd {
+    width: 55px;
+    height: 38px;
+  }
+  .quick-access .items a .b-cir {
+    width: 48px;
+    height: 53px;
+  }
+  .quick-access .items a .b-sq {
+    width: 50px;
+    height: 40px;
+  }
+  .quick-access .items a:hover {
+    font-size: 58px;
+  }
+}
+@media (min-width: 768px) {
+  .quick-access {
+    width: 620px;
+    height: 130px;
+    font-size: 60px;
+  }
+  .quick-access .items {
+    margin: 15px auto;
+    width: 100px;
+    height: 100px;
+  }
+  .quick-access .items a {
+    line-height: 100px;
+    border-radius: 13px;
+  }
+  .quick-access .items a .bckgrnd {
+    width: 69px;
+    height: 47px;
+    border-radius: 10px;
+  }
+  .quick-access .items a .b-cir {
+    width: 62px;
+    height: 66px;
+    border-radius: 50%;
+  }
+  .quick-access .items a .b-sq {
+    width: 50px;
+  }
+  .quick-access .items a:hover {
+    font-size: 70px;
+  }
+}/*# sourceMappingURL=style.css.map */
