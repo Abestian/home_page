@@ -11,11 +11,10 @@ body {
   font-size: 34px;
 }
 
-.hero-image {
+.bckgrnd {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("../images/avenue_1920.jpg");
   background-size: cover;
   background-position: 50%;
 }
@@ -32,13 +31,11 @@ body {
   text-align: center;
   border-radius: 9px;
   transition: width 0.2s, padding 0.2s, font-size 0.2s;
+  font-size: 16px;
 }
-.daily-info p {
-  font-size: 14px;
-}
-.daily-info p span {
-  font-weight: bold;
+.daily-info .day-info {
   text-transform: capitalize;
+  font-weight: bold;
 }
 
 .quick-access {
@@ -153,13 +150,80 @@ body {
   right: 5%;
 }
 
+.settings-button {
+  z-index: 10;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  background: none;
+  color: #fff;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.settings-panel {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  right: 0%;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: width 0.3s;
+}
+.settings-panel .settings {
+  margin: 20px;
+  transition: margin 0.3s;
+}
+.settings-panel .settings h2 {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 24px;
+  transition: font-size 0.3s;
+}
+.settings-panel .settings .line-between {
+  width: 100%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.settings-panel .settings .language {
+  padding: 20px 0;
+  transition: font-size 0.3s, padding 0.3s;
+}
+.settings-panel .settings .language .para-lang {
+  font-size: 16px;
+  cursor: default;
+}
+.settings-panel .settings .language span {
+  padding: 0 3px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.show {
+  width: 100%;
+}
+
+.gear-turn {
+  transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.active-language {
+  font-weight: bold;
+  text-decoration: underline;
+  transition: font-weight 0.3s;
+}
+
 @media (min-width: 390px) {
   .daily-info {
     padding: 8px 0;
-    border-radius: 9px;
-  }
-  .daily-info p {
-    font-size: 16px;
+    border-radius: 11px;
+    font-size: 18px;
   }
   .quick-access {
     width: 95%;
@@ -196,10 +260,8 @@ body {
   .daily-info {
     width: 356px;
     padding: 9px 0;
-    border-radius: 9px;
-  }
-  .daily-info p {
-    font-size: 18px;
+    border-radius: 13px;
+    font-size: 22px;
   }
   .quick-access {
     width: 456px;
@@ -231,15 +293,29 @@ body {
   .quick-access .items a:hover {
     font-size: 58px;
   }
+  .settings-panel .settings {
+    margin: 20px 30px;
+  }
+  .settings-panel .settings h2 {
+    font-size: 26px;
+  }
+  .settings-panel .settings .language {
+    padding: 25px 0;
+  }
+  .settings-panel .settings .language .para-lang {
+    font-size: 20px;
+  }
+  .settings-panel .settings .language span {
+    padding: 0 4px;
+    font-size: 18px;
+  }
 }
 @media (min-width: 768px) {
   .daily-info {
     width: 520px;
-    padding: 10px 0;
-    border-radius: 9px;
-  }
-  .daily-info p {
-    font-size: 20px;
+    padding: 15px 0;
+    border-radius: 13px;
+    font-size: 24px;
   }
   .quick-access {
     width: 620px;
@@ -270,5 +346,40 @@ body {
   }
   .quick-access .items a:hover {
     font-size: 70px;
+  }
+  .settings-button {
+    z-index: 10;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    background: none;
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .show {
+    width: 780px;
+  }
+  .gear-turn {
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+  .settings-panel .settings {
+    margin: 20px 40px;
+  }
+  .settings-panel .settings h2 {
+    font-size: 32px;
+  }
+  .settings-panel .settings .language {
+    padding: 30px 0;
+  }
+  .settings-panel .settings .language .para-lang {
+    font-size: 24px;
+  }
+  .settings-panel .settings .language span {
+    padding: 0 6px;
+    font-size: 22px;
   }
 }/*# sourceMappingURL=style.css.map */
