@@ -14,14 +14,21 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<!-- TODO Information about current day and the weather -->
+<!-- TODO Information about current weather -->
 <!-- TODO 3 random words in german (I'm learning, so it's mainly for me) -->
 <!-- TODO Try to change pre set sites to CRUD -->
 <!-- TODO Settings -->
 <!-- TODO Left panels (thinking phase) -->
 <!-- TODO Background -->
+<!-- TODO Holiday special themes -->
 
 <body>
+    <div class="hero-image"></div>
+    <!-- this class is responsible for showing current day info (//TODO weather info) -->
+    <div class="daily-info">
+        <p>Dziś jest: <span class="day-info"></span></p>
+    </div>
+
     <!-- this div is a box, that contains quick access icons of my choosing -->
     <div class="quick-access">
         <!-- each item beside it's own class is assigned to class 'items' and 'i1-5', is given it's own background 'bckgrnd b-..' to make it possible for icon to have two different colors -->
@@ -43,6 +50,8 @@
                 <div class="bckgrnd b-sq"></div>
             </a></div>
     </div>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
