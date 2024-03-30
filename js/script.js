@@ -10,6 +10,10 @@ let langPol
 let langEng
 let langDe
 let langTitle
+let savedTabsBtn
+let savedTabsPnl
+let savedTabsHead
+let chevronBtn
 
 let currentLanguage = 'en'
 
@@ -31,11 +35,16 @@ const prepareDOMElements = () => {
 	langEng = document.querySelector('.lang-english')
 	langDe = document.querySelector('.lang-deutsch')
 	langTitle = document.querySelector('.lang-title')
+	savedTabsBtn = document.querySelector('.savedtabs-button')
+	savedTabsPnl = document.querySelector('.savedtabs-panel')
+	savedTabsHead = document.querySelector('.savedtabs-header')
+	chevronBtn = document.querySelector('.fa-chevron-up')
 }
 // function that adds event listeners
 const prepareDOMEvents = () => {
 	settBtn.addEventListener('click', showSettingsPanel)
 	languageSettings.addEventListener('click', checkClick)
+	savedTabsBtn.addEventListener('click', showSavedTabsPanel)
 }
 
 // function that choses a random background for the home page
@@ -109,6 +118,8 @@ const setPolishLanguage = () => {
 	langEng.textContent = 'Angielski'
 	langPol.textContent = 'Polski'
 	langDe.textContent = 'Niemiecki'
+
+	savedTabsHead.textContent = 'Zapisane Karty'
 }
 const setEnglishLanguage = () => {
 	currentLanguage = 'en'
@@ -121,6 +132,8 @@ const setEnglishLanguage = () => {
 	langEng.textContent = 'English'
 	langPol.textContent = 'Polish'
 	langDe.textContent = 'German'
+
+	savedTabsHead.textContent = 'Saved Tabs'
 }
 
 const setDeutschLanguage = () => {
@@ -134,12 +147,20 @@ const setDeutschLanguage = () => {
 	langEng.textContent = 'Englisch'
 	langPol.textContent = 'Polnisch'
 	langDe.textContent = 'Deutsch'
+
+	savedTabsHead.textContent = 'Gespeicherte Tabs'
 }
 
 // function that toggles setting panel (also make the gear turn)
 const showSettingsPanel = () => {
 	settPnl.classList.toggle('show')
 	settBtn.classList.toggle('gear-turn')
+}
+
+const showSavedTabsPanel = () => {
+	savedTabsPnl.classList.toggle('active-savedtabs')
+	savedTabsBtn.classList.toggle('active-savedtabsbtn')
+	chevronBtn.classList.toggle('chevron-rotate')
 }
 
 // event listeners that run functions as soon as the web page is opened

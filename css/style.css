@@ -9,6 +9,7 @@ body {
   background-color: #333;
   font-family: "Montserrat", sans-serif;
   font-size: 34px;
+  height: 100%;
 }
 
 .background-picture {
@@ -141,15 +142,24 @@ body {
 .settings-button {
   z-index: 10;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 0;
+  bottom: 0;
   transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
   color: #fff;
-  background: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 2px solid rgba(0, 0, 0, 0);
   font-size: 30px;
-  border: none;
-  transition: transform 0.3s;
+  border-radius: 50%;
+  transition: transform 0.3s, color 0.3s, background-color 0.3s, border 0.3s;
   cursor: pointer;
+}
+
+.settings-button:hover {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 3px solid #fff;
 }
 
 .settings-panel {
@@ -159,7 +169,7 @@ body {
   right: 0%;
   width: 0%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   transition: width 0.3s;
 }
 .settings-panel .settings {
@@ -193,6 +203,14 @@ body {
   cursor: pointer;
 }
 
+.savedtabs-button {
+  display: none;
+}
+
+.savedtabs-panel {
+  display: none;
+}
+
 .show {
   width: 100%;
 }
@@ -205,6 +223,10 @@ body {
   font-weight: bold;
   text-decoration: underline;
   transition: font-weight 0.3s;
+}
+
+.active-savedtabs {
+  height: 300px;
 }
 
 @media (min-width: 390px) {
@@ -357,5 +379,91 @@ body {
   .settings-panel .settings .language-settings span {
     padding: 0 6px;
     font-size: 22px;
+  }
+  .savedtabs-button {
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 40px;
+    font-size: 35px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    transition: transform 0.3s, color 0.3s, background-color 0.3s, border 0.3s, bottom 0.3s, height 0.3s, border-radius 0.1s;
+    cursor: pointer;
+  }
+  .savedtabs-button .fa-chevron-up {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+  }
+  .savedtabs-button .chevron-rotate {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  .savedtabs-button:hover {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 3px solid #fff;
+  }
+  .savedtabs-panel {
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 620px;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    transition: height 0.3s, bottom 0.3s, overflow 0.1s;
+  }
+  .savedtabs-panel .savedtabs {
+    margin: 0 10px;
+  }
+  .savedtabs-panel .savedtabs table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .savedtabs-panel .savedtabs table th {
+    padding: 10px;
+    font-size: 26px;
+  }
+  .savedtabs-panel .savedtabs table td {
+    width: 33%;
+    padding: 10px 7px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  .savedtabs-panel .savedtabs table td a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8156862745);
+    transition: color 0.3s;
+  }
+  .savedtabs-panel .savedtabs table td a:hover {
+    color: #2b9cd1;
+  }
+  .savedtabs-panel .savedtabs table td + td {
+    border-left: 2px solid #fff;
+  }
+  .active-savedtabs {
+    bottom: 0px;
+    height: 300px;
+  }
+  .active-savedtabsbtn {
+    bottom: 285px;
+    background-color: rgba(0, 0, 0, 0.9);
   }
 }/*# sourceMappingURL=style.css.map */
