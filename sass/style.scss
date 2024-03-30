@@ -12,7 +12,7 @@ body {
 	font-size: 34px;
 }
 // style for background image, displayed content is chosen via javascript function
-.bckgrnd {
+.background-picture {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -76,7 +76,7 @@ body {
 			transition: color 0.3s, font-size 0.2s, border 0.1s, background-color 0.1s;
 			cursor: pointer;
 			// background style for rectangle acting as a template, it's invisible unless a mouse hovers over an icon
-			.bckgrnd {
+			.icon-bg {
 				z-index: -2;
 				position: absolute;
 				top: 50%;
@@ -90,13 +90,13 @@ body {
 				transition: display 0.1s;
 			}
 			// background size for circle icons
-			.b-cir {
+			.circle-bg {
 				width: 28px;
 				height: 29px;
 				border-radius: 50%;
 			}
 			// background size for square icons
-			.b-sq {
+			.square-bg {
 				width: 27px;
 				height: 25px;
 			}
@@ -106,41 +106,28 @@ body {
 			font-size: 35px;
 			border: 2px solid antiquewhite;
 			background-color: #ffffff52;
+			.icon-bg {
+				display: block;
+			}
 		}
 		// each icon has it's own color
 		.mail:hover {
 			color: #fabc05;
-			.b-rec {
-				display: block;
-			}
 		}
 		.youtube:hover {
 			color: #ff0000;
-			.b-rec {
-				display: block;
-			}
 		}
-
 		.github:hover {
 			color: #913fa1;
-			.b-cir {
-				display: block;
-			}
 		}
 		.linkedin:hover {
 			color: #0a66c2;
-			.b-sq {
-				display: block;
-			}
 		}
 		.reddit:hover {
 			color: #ff4500;
-			.b-sq {
-				display: block;
-			}
 		}
 	}
-	// distribution of items inside a quick access panel
+	// placement of items inside a quick access panel
 	.i1 {
 		left: 5%;
 	}
@@ -167,12 +154,12 @@ body {
 	right: 10px;
 	bottom: 10px;
 	transform: translate(-50%, -50%);
-	background: none;
 	color: #fff;
+	background: none;
 	font-size: 30px;
 	border: none;
-	cursor: pointer;
 	transition: transform 0.3s;
+	cursor: pointer;
 }
 // settings panel to customize the home page
 .settings-panel {
@@ -187,9 +174,9 @@ body {
 	.settings {
 		margin: 20px;
 		transition: margin 0.3s;
-		h2 {
-			text-align: center;
+		.settings-header {
 			padding: 15px 0;
+			text-align: center;
 			font-size: 24px;
 			transition: font-size 0.3s;
 		}
@@ -201,10 +188,10 @@ body {
 			background-color: #fff;
 			border-radius: 10px;
 		}
-		.language {
+		.language-settings {
 			padding: 20px 0;
 			transition: font-size 0.3s, padding 0.3s;
-			.para-lang {
+			.lang-title {
 				font-size: 16px;
 				cursor: default;
 			}
@@ -216,7 +203,6 @@ body {
 		}
 	}
 }
-
 // classes to use in javascript
 .show {
 	width: 100%;
@@ -249,15 +235,15 @@ body {
 			a {
 				line-height: 60px;
 				border-radius: 9px;
-				.bckgrnd {
+				.rectangle-bg {
 					width: 43px;
 					height: 28px;
 				}
-				.b-cir {
+				.circle-bg {
 					width: 35px;
 					height: 41px;
 				}
-				.b-sq {
+				.square-bg {
 					width: 35px;
 					height: 31px;
 				}
@@ -287,15 +273,15 @@ body {
 			a {
 				line-height: 75px;
 				border-radius: 11px;
-				.bckgrnd {
+				.rectangle-bg {
 					width: 55px;
 					height: 38px;
 				}
-				.b-cir {
+				.circle-bg {
 					width: 48px;
 					height: 53px;
 				}
-				.b-sq {
+				.square-bg {
 					width: 50px;
 					height: 40px;
 				}
@@ -308,12 +294,12 @@ body {
 	.settings-panel {
 		.settings {
 			margin: 20px 30px;
-			h2 {
+			.settings-header {
 				font-size: 26px;
 			}
-			.language {
+			.language-settings {
 				padding: 25px 0;
-				.para-lang {
+				.lang-title {
 					font-size: 20px;
 				}
 				span {
@@ -342,17 +328,18 @@ body {
 			a {
 				line-height: 100px;
 				border-radius: 13px;
-				.bckgrnd {
+				.rectangle-bg {
 					width: 69px;
 					height: 47px;
 					border-radius: 10px;
 				}
-				.b-cir {
+				.circle-bg {
 					width: 62px;
 					height: 66px;
 					border-radius: 50%;
 				}
-				.b-sq {
+				.square-bg {
+					height: 45px;
 					width: 50px;
 				}
 			}
@@ -360,19 +347,6 @@ body {
 				font-size: 70px;
 			}
 		}
-	}
-	.settings-button {
-		z-index: 10;
-		position: absolute;
-		right: 10px;
-		bottom: 10px;
-		transform: translate(-50%, -50%);
-		background: none;
-		color: #fff;
-		font-size: 30px;
-		border: none;
-		cursor: pointer;
-		transition: transform 0.3s;
 	}
 	.show {
 		width: 780px;
@@ -383,12 +357,12 @@ body {
 	.settings-panel {
 		.settings {
 			margin: 20px 40px;
-			h2 {
+			.settings-header {
 				font-size: 32px;
 			}
-			.language {
+			.language-settings {
 				padding: 30px 0;
-				.para-lang {
+				.lang-title {
 					font-size: 24px;
 				}
 				span {

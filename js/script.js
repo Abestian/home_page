@@ -1,15 +1,15 @@
 // initialization of variables
 let dayInfo
 let dayText
-let bckgrndImg
+let backgroundImg
 let settBtn
 let settPnl
 let settHead
-let languages
+let languageSettings
 let langPol
 let langEng
 let langDe
-let paragraphLanguage
+let langTitle
 
 let currentLanguage = 'en'
 
@@ -22,20 +22,20 @@ const main = () => {
 const prepareDOMElements = () => {
 	dayInfo = document.querySelector('.day-info')
 	dayText = document.querySelector('.day-text')
-	bckgrndImg = document.querySelector('.bckgrnd')
+	backgroundImg = document.querySelector('.background-picture')
 	settBtn = document.querySelector('.settings-button')
 	settPnl = document.querySelector('.settings-panel')
-	settHead = document.querySelector('.setting-header')
-	languages = document.querySelector('.language')
+	settHead = document.querySelector('.settings-header')
+	languageSettings = document.querySelector('.language-settings')
 	langPol = document.querySelector('.lang-polish')
 	langEng = document.querySelector('.lang-english')
 	langDe = document.querySelector('.lang-deutsch')
-	paragraphLanguage = document.querySelector('.para-lang')
+	langTitle = document.querySelector('.lang-title')
 }
 // function that adds event listeners
 const prepareDOMEvents = () => {
 	settBtn.addEventListener('click', showSettingsPanel)
-	languages.addEventListener('click', checkClick)
+	languageSettings.addEventListener('click', checkClick)
 }
 
 // function that choses a random background for the home page
@@ -53,7 +53,7 @@ const randomBackground = () => {
 	]
 	// random element from an array
 	const number = Math.floor(Math.random() * images.length)
-	bckgrndImg.style.backgroundImage = images[number]
+	backgroundImg.style.backgroundImage = images[number]
 }
 
 // function that displays current day based on set language
@@ -105,7 +105,7 @@ const setPolishLanguage = () => {
 	langEng.classList.remove('active-language')
 
 	settHead.textContent = 'Ustawienia'
-	paragraphLanguage.textContent = 'Język:'
+	langTitle.textContent = 'Język:'
 	langEng.textContent = 'Angielski'
 	langPol.textContent = 'Polski'
 	langDe.textContent = 'Niemiecki'
@@ -117,7 +117,7 @@ const setEnglishLanguage = () => {
 	langPol.classList.remove('active-language')
 
 	settHead.textContent = 'Settings'
-	paragraphLanguage.textContent = 'Language:'
+	langTitle.textContent = 'Language:'
 	langEng.textContent = 'English'
 	langPol.textContent = 'Polish'
 	langDe.textContent = 'German'
@@ -130,7 +130,7 @@ const setDeutschLanguage = () => {
 	langEng.classList.remove('active-language')
 
 	settHead.textContent = 'Einstellungen'
-	paragraphLanguage.textContent = 'Sprache:'
+	langTitle.textContent = 'Sprache:'
 	langEng.textContent = 'Englisch'
 	langPol.textContent = 'Polnisch'
 	langDe.textContent = 'Deutsch'

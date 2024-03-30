@@ -22,45 +22,44 @@
 <!-- TODO Background: try to add every file from a folder and put it to an array -->
 <!-- TODO Holiday special themes -->
 <!-- TODO Learn about saving settings, so they don't reset after reload -->
-<!-- TODO Change classes names to make it clearer to see what they account for -->
 
 <body>
     <!-- background div -->
-    <div class="bckgrnd"></div>
-    <!-- this class is responsible for showing current day info (//TODO weather info) -->
+    <div class="background-picture"></div>
+    <!-- class 'daily-info' is responsible for showing current day info -->
     <div class="daily-info">
         <span class="day-text"></span><span class="day-info"></span>
     </div>
 
     <!-- this div is a box, that contains quick access icons of my choosing -->
     <div class="quick-access">
-        <!-- each item beside it's own class is assigned to class 'items' and 'i1-5', is given it's own background 'bckgrnd b-..' to make it possible for icon to have two different colors -->
+        <!-- each item beside it's own class is assigned to class 'items' and 'i1-5', is given it's own background 'icon-bg b-..' to make it possible for icon to have two different colors -->
         <div class="items i1"><a class="mail" href="https://mail.google.com/"><i class="fa-solid fa-envelope"></i>
-                <div class="bckgrnd b-rec"></div>
+                <div class="icon-bg rectangle-bg"></div>
             </a></div>
         <div class="items i2"><a class="youtube" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i>
-                <div class="bckgrnd b-rec"></div>
+                <div class="icon-bg rectangle-bg"></div>
             </a></div>
         <div class="items i3"><a class="github" href="https://github.com/"><i class="fa-brands fa-github"></i>
-                <div class="bckgrnd b-cir"></div>
+                <div class="icon-bg circle-bg"></div>
             </a></div>
         <div class="items i4"><a class="linkedin" href="https://www.linkedin.com/feed/"><i
                     class="fa-brands fa-linkedin"></i>
-                <div class="bckgrnd b-sq"></div>
+                <div class="icon-bg square-bg"></div>
             </a></div>
         <div class="items i5"><a class="reddit" href="https://www.reddit.com/"><i
                     class="fa-brands fa-square-reddit"></i>
-                <div class="bckgrnd b-sq"></div>
+                <div class="icon-bg square-bg"></div>
             </a></div>
     </div>
     <!-- this part of code is in charge of settings panel and it's content -->
     <button class="settings-button"><i class="fa-solid fa-gear"></i></button>
     <div class="settings-panel">
         <div class="settings">
-            <h2 class="setting-header"></h2>
+            <h2 class="settings-header"></h2>
             <div class="line-between"></div>
-            <div class="language">
-                <span class="para-lang"></span>
+            <div class="language-settings">
+                <span class="lang-title"></span>
                 <span class="lang-polish"></span>
                 <span class="lang-english"></span>
                 <span class="lang-deutsch"></span>

@@ -11,7 +11,7 @@ body {
   font-size: 34px;
 }
 
-.bckgrnd {
+.background-picture {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -74,7 +74,7 @@ body {
   transition: color 0.3s, font-size 0.2s, border 0.1s, background-color 0.1s;
   cursor: pointer;
 }
-.quick-access .items a .bckgrnd {
+.quick-access .items a .icon-bg {
   z-index: -2;
   position: absolute;
   top: 50%;
@@ -87,12 +87,12 @@ body {
   border-radius: 4px;
   transition: display 0.1s;
 }
-.quick-access .items a .b-cir {
+.quick-access .items a .circle-bg {
   width: 28px;
   height: 29px;
   border-radius: 50%;
 }
-.quick-access .items a .b-sq {
+.quick-access .items a .square-bg {
   width: 27px;
   height: 25px;
 }
@@ -101,35 +101,23 @@ body {
   border: 2px solid antiquewhite;
   background-color: rgba(255, 255, 255, 0.3215686275);
 }
+.quick-access .items a:hover .icon-bg {
+  display: block;
+}
 .quick-access .items .mail:hover {
   color: #fabc05;
-}
-.quick-access .items .mail:hover .b-rec {
-  display: block;
 }
 .quick-access .items .youtube:hover {
   color: #ff0000;
 }
-.quick-access .items .youtube:hover .b-rec {
-  display: block;
-}
 .quick-access .items .github:hover {
   color: #913fa1;
-}
-.quick-access .items .github:hover .b-cir {
-  display: block;
 }
 .quick-access .items .linkedin:hover {
   color: #0a66c2;
 }
-.quick-access .items .linkedin:hover .b-sq {
-  display: block;
-}
 .quick-access .items .reddit:hover {
   color: #ff4500;
-}
-.quick-access .items .reddit:hover .b-sq {
-  display: block;
 }
 .quick-access .i1 {
   left: 5%;
@@ -156,12 +144,12 @@ body {
   right: 10px;
   bottom: 10px;
   transform: translate(-50%, -50%);
-  background: none;
   color: #fff;
+  background: none;
   font-size: 30px;
   border: none;
-  cursor: pointer;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .settings-panel {
@@ -178,9 +166,9 @@ body {
   margin: 20px;
   transition: margin 0.3s;
 }
-.settings-panel .settings h2 {
-  text-align: center;
+.settings-panel .settings .settings-header {
   padding: 15px 0;
+  text-align: center;
   font-size: 24px;
   transition: font-size 0.3s;
 }
@@ -191,15 +179,15 @@ body {
   background-color: #fff;
   border-radius: 10px;
 }
-.settings-panel .settings .language {
+.settings-panel .settings .language-settings {
   padding: 20px 0;
   transition: font-size 0.3s, padding 0.3s;
 }
-.settings-panel .settings .language .para-lang {
+.settings-panel .settings .language-settings .lang-title {
   font-size: 16px;
   cursor: default;
 }
-.settings-panel .settings .language span {
+.settings-panel .settings .language-settings span {
   padding: 0 3px;
   font-size: 13px;
   cursor: pointer;
@@ -240,15 +228,15 @@ body {
     line-height: 60px;
     border-radius: 9px;
   }
-  .quick-access .items a .bckgrnd {
+  .quick-access .items a .rectangle-bg {
     width: 43px;
     height: 28px;
   }
-  .quick-access .items a .b-cir {
+  .quick-access .items a .circle-bg {
     width: 35px;
     height: 41px;
   }
-  .quick-access .items a .b-sq {
+  .quick-access .items a .square-bg {
     width: 35px;
     height: 31px;
   }
@@ -278,15 +266,15 @@ body {
     line-height: 75px;
     border-radius: 11px;
   }
-  .quick-access .items a .bckgrnd {
+  .quick-access .items a .rectangle-bg {
     width: 55px;
     height: 38px;
   }
-  .quick-access .items a .b-cir {
+  .quick-access .items a .circle-bg {
     width: 48px;
     height: 53px;
   }
-  .quick-access .items a .b-sq {
+  .quick-access .items a .square-bg {
     width: 50px;
     height: 40px;
   }
@@ -296,16 +284,16 @@ body {
   .settings-panel .settings {
     margin: 20px 30px;
   }
-  .settings-panel .settings h2 {
+  .settings-panel .settings .settings-header {
     font-size: 26px;
   }
-  .settings-panel .settings .language {
+  .settings-panel .settings .language-settings {
     padding: 25px 0;
   }
-  .settings-panel .settings .language .para-lang {
+  .settings-panel .settings .language-settings .lang-title {
     font-size: 20px;
   }
-  .settings-panel .settings .language span {
+  .settings-panel .settings .language-settings span {
     padding: 0 4px;
     font-size: 18px;
   }
@@ -331,34 +319,22 @@ body {
     line-height: 100px;
     border-radius: 13px;
   }
-  .quick-access .items a .bckgrnd {
+  .quick-access .items a .rectangle-bg {
     width: 69px;
     height: 47px;
     border-radius: 10px;
   }
-  .quick-access .items a .b-cir {
+  .quick-access .items a .circle-bg {
     width: 62px;
     height: 66px;
     border-radius: 50%;
   }
-  .quick-access .items a .b-sq {
+  .quick-access .items a .square-bg {
+    height: 45px;
     width: 50px;
   }
   .quick-access .items a:hover {
     font-size: 70px;
-  }
-  .settings-button {
-    z-index: 10;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    transform: translate(-50%, -50%);
-    background: none;
-    color: #fff;
-    font-size: 30px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s;
   }
   .show {
     width: 780px;
@@ -369,16 +345,16 @@ body {
   .settings-panel .settings {
     margin: 20px 40px;
   }
-  .settings-panel .settings h2 {
+  .settings-panel .settings .settings-header {
     font-size: 32px;
   }
-  .settings-panel .settings .language {
+  .settings-panel .settings .language-settings {
     padding: 30px 0;
   }
-  .settings-panel .settings .language .para-lang {
+  .settings-panel .settings .language-settings .lang-title {
     font-size: 24px;
   }
-  .settings-panel .settings .language span {
+  .settings-panel .settings .language-settings span {
     padding: 0 6px;
     font-size: 22px;
   }
