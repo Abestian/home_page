@@ -16,13 +16,11 @@
 
 <!-- TODO Information about current weather -->
 <!-- TODO 3 random words in german (I'm learning, so it's mainly for me) -->
-<!-- TODO Try to change pre set sites to CRUD -->
-<!-- TODO Add more settings -->
-<!-- TODO Left panels (thinking phase) -->
+<!-- TODO Try to change pre set sites/tabs to CRUD -->
 <!-- TODO Background: try to add every file from a folder and put it to an array -->
 <!-- TODO Holiday special themes -->
 <!-- TODO Learn about saving settings, so they don't reset after reload -->
-<!-- TODO Create saved tabs menu -->
+<!-- TODO Create saved tabs panel for mobile. I didn't do Mobile First method in this part because first I want to learn how to do carousel in js. -->
 
 <body>
     <!-- background div -->
@@ -59,16 +57,24 @@
         <div class="settings">
             <h2 class="settings-header"></h2>
             <div class="line-between"></div>
-            <div class="language-settings">
-                <span class="lang-title"></span>
+            <div class="language segment">
+                <span class="lang-title title"></span>
                 <span class="lang-polish"></span>
                 <span class="lang-english"></span>
                 <span class="lang-deutsch"></span>
 
             </div>
             <div class="line-between"></div>
+            <div class="link-alignment segment">
+                <span class="link-align title">Align saved link: </span>
+                <span class="align-left">Left</span>
+                <span class="align-center">Center</span>
+                <span class="align-right">Right</span>
+            </div>
+            <div class="line-between"></div>
         </div>
     </div>
+    <!-- this part creates a toggle'able saved tabs panel that emerges from the bottom of the screen and contains a list with preset links -->
     <button class="savedtabs-button"><i class="fa-solid fa-chevron-up"></i></button>
     <div class="savedtabs-panel">
         <div class="savedtabs">
@@ -78,37 +84,38 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="https://www.udemy.com/" rel="nofollow">Udemy</a></td>
-                        <td><a href="https://developer.mozilla.org/en-US/" rel="nofollow">MDN</a></td>
-                        <td><a href="https://fonts.google.com/" rel="nofollow">Google Fonts</a></td>
+                        <td class="saved-link"><a href="https://www.udemy.com/" rel="nofollow">Udemy</a></td>
+                        <td class="saved-link"><a href="https://developer.mozilla.org/en-US/" rel="nofollow">MDN</a>
+                        </td>
+                        <td class="saved-link"><a href="https://fonts.google.com/" rel="nofollow">Google Fonts</a></td>
                     </tr>
                     <tr>
-                        <td><a href="https://www.duolingo.com/" rel="nofollow">Duolingo</a></td>
-                        <td><a href="https://codepen.io/" rel="nofollow">Codepen</a></td>
-                        <td><a href="https://pixabay.com/pl/" rel="nofollow">Pixabay</a></td>
+                        <td class="saved-link"><a href="https://www.duolingo.com/" rel="nofollow">Duolingo</a></td>
+                        <td class="saved-link"><a href="https://codepen.io/" rel="nofollow">Codepen</a></td>
+                        <td class="saved-link"><a href="https://pixabay.com/pl/" rel="nofollow">Pixabay</a></td>
 
                     </tr>
                     <tr>
-                        <td><a href="https://mmcschool.pl/" rel="nofollow">MMC-School</a></td>
-                        <td><a href="https://roadmap.sh/" rel="nofollow">Dev Roadmap</a></td>
-                        <td><a href="https://webgradients.com/" rel="nofollow">Web Gradients</a></td>
+                        <td class="saved-link"><a href="https://mmcschool.pl/" rel="nofollow">MMC-School</a></td>
+                        <td class="saved-link"><a href="https://roadmap.sh/" rel="nofollow">Dev Roadmap</a></td>
+                        <td class="saved-link"><a href="https://webgradients.com/" rel="nofollow">Web Gradients</a></td>
                     </tr>
                     <tr>
-                        <td><a href="" rel="nofollow"></a></td>
-                        <td><a href="" rel="nofollow"></a></td>
-                        <td><a href="https://imagecolorpicker.com/pl" rel="nofollow">Color Picker</a></td>
+                        <td class="saved-link"><a href="" rel="nofollow"></a></td>
+                        <td class="saved-link"><a href="" rel="nofollow"></a></td>
+                        <td class="saved-link"><a href="https://imagecolorpicker.com/pl" rel="nofollow">Color Picker</a>
+                        </td>
 
                     </tr>
                     <tr>
-                        <td><a href="" rel="nofollow"></a></td>
-                        <td><a href="" rel="nofollow"></a></td>
-                        <td><a href="https://fontawesome.com/" rel="nofollow">Font Awesome</a></td>
+                        <td class="saved-link"><a href="" rel="nofollow"></a></td>
+                        <td class="saved-link"><a href="" rel="nofollow"></a></td>
+                        <td class="saved-link"><a href="https://fontawesome.com/" rel="nofollow">Font Awesome</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-
 
     <script src="./js/script.js"></script>
 </body>

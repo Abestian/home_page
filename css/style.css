@@ -142,8 +142,8 @@ body {
 .settings-button {
   z-index: 10;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 0%;
+  bottom: 0%;
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
@@ -169,7 +169,7 @@ body {
   right: 0%;
   width: 0%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   transition: width 0.3s;
 }
 .settings-panel .settings {
@@ -189,15 +189,15 @@ body {
   background-color: #fff;
   border-radius: 10px;
 }
-.settings-panel .settings .language-settings {
+.settings-panel .settings .segment {
   padding: 20px 0;
   transition: font-size 0.3s, padding 0.3s;
 }
-.settings-panel .settings .language-settings .lang-title {
+.settings-panel .settings .segment .title {
   font-size: 16px;
   cursor: default;
 }
-.settings-panel .settings .language-settings span {
+.settings-panel .settings .segment span {
   padding: 0 3px;
   font-size: 13px;
   cursor: pointer;
@@ -219,7 +219,7 @@ body {
   transform: translate(-50%, -50%) rotate(-180deg);
 }
 
-.active-language {
+.active-setting {
   font-weight: bold;
   text-decoration: underline;
   transition: font-weight 0.3s;
@@ -227,6 +227,24 @@ body {
 
 .active-savedtabs {
   height: 300px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.active-alignment {
+  font-weight: bold;
+  text-decoration: underline;
+  transition: font-weight 0.3s;
 }
 
 @media (min-width: 390px) {
@@ -309,13 +327,13 @@ body {
   .settings-panel .settings .settings-header {
     font-size: 26px;
   }
-  .settings-panel .settings .language-settings {
+  .settings-panel .settings .segment {
     padding: 25px 0;
   }
-  .settings-panel .settings .language-settings .lang-title {
+  .settings-panel .settings .segment .title {
     font-size: 20px;
   }
-  .settings-panel .settings .language-settings span {
+  .settings-panel .settings .segment span {
     padding: 0 4px;
     font-size: 18px;
   }
@@ -370,13 +388,13 @@ body {
   .settings-panel .settings .settings-header {
     font-size: 32px;
   }
-  .settings-panel .settings .language-settings {
+  .settings-panel .settings .segment {
     padding: 30px 0;
   }
-  .settings-panel .settings .language-settings .lang-title {
+  .settings-panel .settings .segment .title {
     font-size: 24px;
   }
-  .settings-panel .settings .language-settings span {
+  .settings-panel .settings .segment span {
     padding: 0 6px;
     font-size: 22px;
   }
@@ -398,12 +416,13 @@ body {
   }
   .savedtabs-button .fa-chevron-up {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.3s;
   }
   .savedtabs-button .chevron-rotate {
+    top: 45%;
     transform: translate(-50%, -50%) rotate(180deg);
   }
   .savedtabs-button:hover {
@@ -420,7 +439,7 @@ body {
     transform: translate(-50%);
     width: 620px;
     height: 0px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
     transition: height 0.3s, bottom 0.3s, overflow 0.1s;
@@ -440,7 +459,6 @@ body {
   .savedtabs-panel .savedtabs table td {
     width: 33%;
     padding: 10px 7px;
-    text-align: center;
     font-size: 20px;
     border: 1px solid rgba(0, 0, 0, 0);
   }
@@ -453,7 +471,7 @@ body {
     transition: color 0.3s;
   }
   .savedtabs-panel .savedtabs table td a:hover {
-    color: #2b9cd1;
+    color: #fff;
   }
   .savedtabs-panel .savedtabs table td + td {
     border-left: 2px solid #fff;

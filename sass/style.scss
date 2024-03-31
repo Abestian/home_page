@@ -152,8 +152,8 @@ body {
 .settings-button {
 	z-index: 10;
 	position: absolute;
-	right: 0;
-	bottom: 0;
+	right: 0%;
+	bottom: 0%;
 	transform: translate(-50%, -50%);
 	width: 50px;
 	height: 50px;
@@ -179,7 +179,7 @@ body {
 	right: 0%;
 	width: 0%;
 	height: 100%;
-	background-color: rgba($color: #000000, $alpha: 0.7);
+	background-color: rgba($color: #000000, $alpha: 0.9);
 	transition: width 0.3s;
 	.settings {
 		margin: 20px;
@@ -198,10 +198,10 @@ body {
 			background-color: #fff;
 			border-radius: 10px;
 		}
-		.language-settings {
+		.segment {
 			padding: 20px 0;
 			transition: font-size 0.3s, padding 0.3s;
-			.lang-title {
+			.title {
 				font-size: 16px;
 				cursor: default;
 			}
@@ -213,6 +213,7 @@ body {
 		}
 	}
 }
+// styling of saved tabs panel !!! MOBILE VERSION IN THE FUTURE !!!
 .savedtabs-button {
 	display: none;
 }
@@ -226,13 +227,27 @@ body {
 .gear-turn {
 	transform: translate(-50%, -50%) rotate(-180deg);
 }
-.active-language {
+.active-setting {
 	font-weight: bold;
 	text-decoration: underline;
 	transition: font-weight 0.3s;
 }
 .active-savedtabs {
 	height: 300px;
+}
+.align-left {
+	text-align: left;
+}
+.align-center {
+	text-align: center;
+}
+.align-right {
+	text-align: right;
+}
+.active-alignment {
+	font-weight: bold;
+	text-decoration: underline;
+	transition: font-weight 0.3s;
 }
 
 // media queries for RWD
@@ -316,9 +331,9 @@ body {
 			.settings-header {
 				font-size: 26px;
 			}
-			.language-settings {
+			.segment {
 				padding: 25px 0;
-				.lang-title {
+				.title {
 					font-size: 20px;
 				}
 				span {
@@ -379,9 +394,9 @@ body {
 			.settings-header {
 				font-size: 32px;
 			}
-			.language-settings {
+			.segment {
 				padding: 30px 0;
-				.lang-title {
+				.title {
 					font-size: 24px;
 				}
 				span {
@@ -391,6 +406,7 @@ body {
 			}
 		}
 	}
+	// most of saved tabs panel code is written in this media query because I decided to create it for big screen only (smaller screens will have swipable columns, once I manage to do this, I will update and clean the code!!!)
 	.savedtabs-button {
 		display: block;
 		position: absolute;
@@ -409,12 +425,13 @@ body {
 		cursor: pointer;
 		.fa-chevron-up {
 			position: absolute;
-			top: 45%;
+			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			transition: transform 0.3s;
 		}
 		.chevron-rotate {
+			top: 45%;
 			transform: translate(-50%, -50%) rotate(180deg);
 		}
 	}
@@ -432,7 +449,7 @@ body {
 		transform: translate(-50%);
 		width: 620px;
 		height: 0px;
-		background-color: rgba($color: #000000, $alpha: 0.8);
+		background-color: rgba($color: #000000, $alpha: 0.9);
 		border-top-left-radius: 13px;
 		border-top-right-radius: 13px;
 		transition: height 0.3s, bottom 0.3s, overflow 0.1s;
@@ -449,7 +466,6 @@ body {
 				td {
 					width: 33%;
 					padding: 10px 7px;
-					text-align: center;
 					font-size: 20px;
 					border: 1px solid rgba($color: #000000, $alpha: 0);
 					a {
@@ -461,7 +477,7 @@ body {
 						transition: color 0.3s;
 					}
 					a:hover {
-						color: #2b9cd1;
+						color: #fff;
 					}
 				}
 			}
