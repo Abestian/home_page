@@ -1,2 +1,3 @@
 # home_page
-Custom homepage
+WIP | 
+This is my personal home page that I'm creating from scratch.
