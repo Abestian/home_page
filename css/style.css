@@ -22,21 +22,40 @@ body {
 
 .daily-info {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   top: 7.5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 7.5px 0;
-  width: 70%;
+  padding: 7.5px 25px;
+  width: auto;
   height: auto;
   background-color: rgba(0, 0, 0, 0.7);
-  text-align: center;
+  font-size: 14px;
   border-radius: 9px;
   transition: width 0.2s, padding 0.2s, font-size 0.2s;
-  font-size: 16px;
 }
-.daily-info .day-info {
+.daily-info p {
+  margin: 0 auto;
+  padding: 0 5px;
+  text-align: center;
   text-transform: capitalize;
+  white-space: nowrap;
+}
+.daily-info .temperature {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+}
+.daily-info .day-row {
   font-weight: bold;
+  display: flex;
+}
+.daily-info .line-between {
+  margin: 5px 0;
+  border: 1px solid;
+  border-radius: 25px;
 }
 
 .quick-access {
@@ -249,9 +268,12 @@ body {
 
 @media (min-width: 390px) {
   .daily-info {
-    padding: 8px 0;
+    padding: 8px 30px;
     border-radius: 11px;
     font-size: 18px;
+  }
+  .daily-info .line-between {
+    margin: 8px 0;
   }
   .quick-access {
     width: 95%;
@@ -286,10 +308,12 @@ body {
 }
 @media (min-width: 480px) {
   .daily-info {
-    width: 356px;
-    padding: 9px 0;
+    padding: 9px 35px;
     border-radius: 13px;
     font-size: 22px;
+  }
+  .daily-info .line-between {
+    margin: 9px 0;
   }
   .quick-access {
     width: 456px;
@@ -340,10 +364,12 @@ body {
 }
 @media (min-width: 768px) {
   .daily-info {
-    width: 520px;
-    padding: 15px 0;
+    padding: 11px 45px;
     border-radius: 13px;
     font-size: 24px;
+  }
+  .daily-info .line-between {
+    margin: 11px 0;
   }
   .quick-access {
     width: 620px;

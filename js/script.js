@@ -1,6 +1,5 @@
 // initialization of variables
 let dayInfo
-let dayText
 let backgroundImg
 let settBtn
 let settPnl
@@ -32,7 +31,6 @@ const main = () => {
 // function that downloads elements from html file and sets them to previously created variables
 const prepareDOMElements = () => {
 	dayInfo = document.querySelector('.day-info')
-	dayText = document.querySelector('.day-text')
 	backgroundImg = document.querySelector('.background-picture')
 	settBtn = document.querySelector('.settings-button')
 	settPnl = document.querySelector('.settings-panel')
@@ -85,23 +83,18 @@ const showCurrentDay = language => {
 	switch (language) {
 		case 'en':
 			locale = 'en'
-			text = 'Today is: '
 			break
 		case 'pl':
 			locale = 'pl'
-			text = 'Dziś jest: '
 			break
 		case 'de':
 			locale = 'de'
-			text = 'Heute ist: '
 			break
 		default:
 			locale = 'en'
-			text = 'Today is: '
 			break
 	}
 	const today = day.toLocaleString(locale, { weekday: 'long' })
-	dayText.textContent = text
 	dayInfo.textContent = today
 }
 // function that checks what option is clicked in settings panel
