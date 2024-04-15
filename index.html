@@ -14,26 +14,24 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<!-- TODO Information about current weather -->
-<!-- TODO 3 random words in german (I'm learning, so it's mainly for me) -->
+<!-- TODO Add a possibility to change city in settings for weather showcase -->
 <!-- TODO Try to change pre set sites/tabs to CRUD -->
 <!-- TODO Background: try to add every file from a folder and put it to an array -->
-<!-- TODO Holiday special themes -->
-<!-- TODO Learn about saving settings, so they don't reset after reload -->
-<!-- TODO Create saved tabs panel for mobile. I didn't do Mobile First method in this part because first I want to learn how to do carousel in js. -->
+<!-- TODO Learn how to save settings, so they don't reset after reload -->
+<!-- TODO Create saved tabs panel for mobile. -->
 
 <body>
     <!-- background div -->
     <div class="background-picture"></div>
     <!-- class 'daily-info' is responsible for showing current day and weather info -->
     <div class="daily-info">
-        <p class="day-location">Wrocław</p>
+        <p class="day-location"></p>
         <div class="line-between"></div>
         <div class="day-row">
             <p class="day-info"></p>
             <div class="temperature">
-                <p class="day-temperature">11℃</p>
-                <p class="weather-icon">🌧️</p>
+                <p class="day-temperature"></p>
+                <i class="weather-icon fa-solid"></i>
             </div>
 
         </div>
@@ -125,6 +123,8 @@
             </table>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
     <script src="./js/script.js"></script>
 </body>

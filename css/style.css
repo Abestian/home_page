@@ -48,6 +48,9 @@ body {
   text-align: center;
   display: flex;
 }
+.daily-info .day-temperature {
+  padding: 0 15px;
+}
 .daily-info .day-row {
   font-weight: bold;
   display: flex;

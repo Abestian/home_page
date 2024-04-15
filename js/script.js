@@ -1,5 +1,8 @@
 // initialization of variables
 let dayInfo
+let dayTemp
+let weatherIcon
+let dayLocation
 let backgroundImg
 let settBtn
 let settPnl
@@ -21,6 +24,10 @@ let alignmentRight
 
 let currentLanguage = 'en'
 let currentAlignment = 'center'
+
+const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q='
+const API_KEY = '&appid=fa1b99a11c5fb61b27c8788d58aeb523'
+const API_UNITS = '&units=metric'
 
 const main = () => {
 	prepareDOMElements()
@@ -49,6 +56,9 @@ const prepareDOMElements = () => {
 	alignmentLeft = document.querySelector('.align-left')
 	alignmentCenter = document.querySelector('.align-center')
 	alignmentRight = document.querySelector('.align-right')
+	dayLocation = document.querySelector('.day-location')
+	dayTemp = document.querySelector('.day-temperature')
+	weatherIcon = document.querySelector('.weather-icon')
 }
 // function that adds event listeners
 const prepareDOMEvents = () => {
@@ -97,6 +107,47 @@ const showCurrentDay = language => {
 	const today = day.toLocaleString(locale, { weekday: 'long' })
 	dayInfo.textContent = today
 }
+
+// function that gets information from weather API and displays it in a daily info panel
+
+const weatherInfo = () => {
+	const city = 'Wrocław'
+	const URL = API_LINK + city + API_KEY + API_UNITS
+
+	const now = new Date()
+	const hours = now.getHours()
+
+	axios.get(URL).then(res => {
+		const temp = res.data.main.temp
+		const status = Object.assign({}, ...res.data.weather)
+
+		dayLocation.textContent = city
+		dayTemp.textContent = Math.floor(temp) + '℃'
+
+		if (status.id >= 200 && status.id < 300) {
+			weatherIcon.classList.add('fa-bolt-lightning')
+		} else if (status.id >= 300 && status.id < 400) {
+			weatherIcon.classList.add('fa-cloud-rain')
+		} else if (status.id >= 500 && status.id < 700) {
+			weatherIcon.classList.add('fa-cloud-showers-heavy')
+		} else if (status.id >= 600 && status.id < 700) {
+			weatherIcon.classList.add('fa-snowflake')
+		} else if (status.id >= 700 && status.id < 800) {
+			weatherIcon.classList.add('fa-tornado')
+		} else if (status.id === 800) {
+			if (hours < 22 && hours > 5) {
+				weatherIcon.classList.add('fa-sun')
+			} else {
+				weatherIcon.classList.add('fa-moon')
+			}
+		} else if (status.id > 800 && status.id < 900) {
+			weatherIcon.classList.add('fa-cloud')
+		} else {
+			weatherIcon.classList.add('fa-circle-question')
+		}
+	})
+}
+
 // function that checks what option is clicked in settings panel
 const checkClickSettings = e => {
 	if (e.target.matches('.lang-polish')) {
@@ -226,6 +277,7 @@ const alignRight = () => {
 document.addEventListener('DOMContentLoaded', main)
 document.addEventListener('DOMContentLoaded', setEnglishLanguage)
 document.addEventListener('DOMContentLoaded', randomBackground)
+document.addEventListener('DOMContentLoaded', weatherInfo)
 document.addEventListener('DOMContentLoaded', () => {
 	showCurrentDay(currentLanguage)
 })
