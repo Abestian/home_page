@@ -26,7 +26,7 @@ let currentLanguage = 'en'
 let currentAlignment = 'center'
 
 const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q='
-const API_KEY = '&appid=fa1b99a11c5fb61b27c8788d58aeb523'
+const API_KEY = ''
 const API_UNITS = '&units=metric'
 
 const main = () => {
