@@ -21,12 +21,15 @@ let alignTitle
 let alignmentLeft
 let alignmentCenter
 let alignmentRight
+let weatherKey
+let weatherBtn
+let cityName
 
 let currentLanguage = 'en'
 let currentAlignment = 'center'
 
 const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q='
-const API_KEY = ''
+let API_KEY = ''
 const API_UNITS = '&units=metric'
 
 const main = () => {
@@ -59,12 +62,29 @@ const prepareDOMElements = () => {
 	dayLocation = document.querySelector('.day-location')
 	dayTemp = document.querySelector('.day-temperature')
 	weatherIcon = document.querySelector('.weather-icon')
+	weatherKey = document.querySelector('#weather-key')
+	weatherBtn = document.querySelector('.weather-button')
+	cityName = document.querySelector('#city')
 }
 // function that adds event listeners
 const prepareDOMEvents = () => {
 	settBtn.addEventListener('click', showSettingsPanel)
 	settings.addEventListener('click', checkClickSettings)
 	savedTabsBtn.addEventListener('click', showSavedTabsPanel)
+	weatherBtn.addEventListener('click', setWeatherKey)
+}
+
+let city = ''
+const setWeatherKey = () => {
+	if (weatherKey.value !== '') {
+		API_KEY = weatherKey.value
+		city = cityName.value
+	}
+	console.log(cityName.value)
+	console.log(weatherKey.value)
+	weatherKey.value = ''
+	cityName.value = ''
+	weatherInfo()
 }
 
 // function that choses a random background for the home page
@@ -111,8 +131,7 @@ const showCurrentDay = language => {
 // function that gets information from weather API and displays it in a daily info panel
 
 const weatherInfo = () => {
-	const city = 'Wrocław'
-	const URL = API_LINK + city + API_KEY + API_UNITS
+	const URL = API_LINK + city + '&appid=' + API_KEY + API_UNITS
 
 	const now = new Date()
 	const hours = now.getHours()
@@ -277,7 +296,7 @@ const alignRight = () => {
 document.addEventListener('DOMContentLoaded', main)
 document.addEventListener('DOMContentLoaded', setEnglishLanguage)
 document.addEventListener('DOMContentLoaded', randomBackground)
-document.addEventListener('DOMContentLoaded', weatherInfo)
+// document.addEventListener('DOMContentLoaded', weatherInfo)
 document.addEventListener('DOMContentLoaded', () => {
 	showCurrentDay(currentLanguage)
 })

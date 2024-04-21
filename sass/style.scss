@@ -197,7 +197,11 @@ body {
 .settings-panel {
 	z-index: 1;
 	position: absolute;
-	overflow: hidden;
+	// overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #fff #000000;
 	right: 0%;
 	width: 0%;
 	height: 100%;
@@ -222,12 +226,10 @@ body {
 		}
 		.segment {
 			padding: 20px 0;
-			transition: font-size 0.3s, padding 0.3s;
-			.title {
-				font-size: 16px;
-				cursor: default;
-			}
-			span {
+			margin: 0 auto;
+			text-align: center;
+			display: flex;
+			p {
 				padding: 0 3px;
 				font-size: 13px;
 				cursor: pointer;
@@ -360,10 +362,7 @@ body {
 			}
 			.segment {
 				padding: 25px 0;
-				.title {
-					font-size: 20px;
-				}
-				span {
+				p {
 					padding: 0 4px;
 					font-size: 18px;
 				}
@@ -414,9 +413,6 @@ body {
 	.show {
 		width: 780px;
 	}
-	.gear-turn {
-		transform: translate(-50%, -50%) rotate(-180deg);
-	}
 	.settings-panel {
 		.settings {
 			margin: 20px 40px;
@@ -425,10 +421,7 @@ body {
 			}
 			.segment {
 				padding: 30px 0;
-				.title {
-					font-size: 24px;
-				}
-				span {
+				p {
 					padding: 0 6px;
 					font-size: 22px;
 				}

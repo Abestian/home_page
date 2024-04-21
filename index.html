@@ -64,21 +64,32 @@
         <div class="settings">
             <h2 class="settings-header"></h2>
             <div class="line-between"></div>
+            <div class="link-alignment segment">
+                <p class="link-align title"></p>
+                <p class="align-left"></p>
+                <p class="align-center"></p>
+                <p class="align-right"></p>
+            </div>
+            <div class="line-between"></div>
             <div class="language segment">
-                <span class="lang-title title"></span>
-                <span class="lang-polish"></span>
-                <span class="lang-english"></span>
-                <span class="lang-deutsch"></span>
+                <p class="lang-title title"></p>
+                <p class="lang-polish"></p>
+                <p class="lang-english"></p>
+                <p class="lang-deutsch"></p>
 
             </div>
             <div class="line-between"></div>
-            <div class="link-alignment segment">
-                <span class="link-align title">Align saved link: </span>
-                <span class="align-left">Left</span>
-                <span class="align-center">Center</span>
-                <span class="align-right">Right</span>
+            <div class="city-input segment">
+                <p class="city-title title">City:</p>
+                <input id='city' type="text">
+            </div>
+            <div class="api-input segment">
+                <p class="key-title title">Weather API Key:</p>
+                <input id='weather-key' type="text">
+                <button class="weather-button">Submit</button>
             </div>
             <div class="line-between"></div>
+
         </div>
     </div>
     <!-- this part creates a toggle'able saved tabs panel that emerges from the bottom of the screen and contains a list with preset links -->
